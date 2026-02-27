@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education of Neha</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    color:white;
+    background-image:url("background.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+
+    opacity:0;
+    transform:translateY(40px);
+    animation:pageEnter 0.9s ease forwards;
+}
+
+@keyframes pageEnter{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= HEADER SAME AS PERFECT PAGE ================= */
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:45px;
+}
+
+.nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.top{
+    padding:1rem 2rem;
+    color:black;
+    text-decoration:none;
+    border-radius:50px;
+    box-shadow:0 4px 15px black;
+    margin:50px 70px 20px 70px;
+    transition:0.3s ease;
+}
+
+.top:hover{
+    color:white;
+    background:black;
+}
+
+/* ================= EDUCATION SECTION ================= */
+
+.education{
+    padding:40px 20px;
+}
+
+.edu-heading{
+    font-size:40px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:40px;
+    color:rgb(71,0,0);
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.edu-items{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:rgba(0,0,0,0.4);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 4px 15px black;
+}
+
+.edu-items img{
+    width:250px;
+    border-radius:10px;
+}
+
+.edu-content h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.edu{
+    font-size:18px;
+    margin:5px 0;
+}
+
+.marks{
+    color:rgb(11,246,11);
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding-top:20px;
+    }
+
+    .nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .top{
+        margin:10px 0;
+        padding:10px 20px;
+        font-size:16px;
+    }
+
+    .edu-items{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .edu-items img{
+        width:100%;
+        max-width:300px;
+    }
+
+    .edu-heading{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="nav">
+       <a href="Neha.html" class="top">About Me</a>
+       <a href="education.html" class="top">Education</a>
+       <a href="skills.html" class="top">Skills</a>
+       <a href="habits.html" class="top">Habits</a>
+       <a href="contact.html" class="top">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="education">
+    <h2 class="edu-heading">Education</h2>
+
+    <div class="container">
+
+        <div class="edu-items">
+            <img src="school.jpeg" alt="School Photo">
+            <div class="edu-content">
+                <h3>Karnataka Public School</h3>
+                <div class="edu">High School (Class 10th)</div>
+                <div class="edu">Year: 2022-2023</div>
+                <div class="edu marks">Percentage: 93.92%</div>
+            </div>
+        </div>
+
+        <div class="edu-items">
+            <img src="college1.jpeg" alt="PU College Photo">
+            <div class="edu-content">
+                <h3>Rajajinagar PU College</h3>
+                <div class="edu">PCMB (Class 12th)</div>
+                <div class="edu">Year: 2024</div>
+                <div class="edu marks">Percentage: 93%</div>
+            </div>
+        </div>
+
+        <div class="edu-items">
+            <img src="college2.jpeg" alt="University Photo">
+            <div class="edu-content">
+                <h3>Bengaluru City University</h3>
+                <div class="edu">BCA (AIML)</div>
+                <div class="edu">Year: 2025-2027</div>
+                <div class="edu marks">SGPA: 9.04</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

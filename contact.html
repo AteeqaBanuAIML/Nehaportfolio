@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact – Neha</title>
+<!-- fontawesome for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKVBh2aYtKV3K4e6P53Pz1Zj7u1wzv5i1a7ery4F2X7p5Q6Xo5xZ8V+g6d5a4OQd6gfz+Rg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: white;
+  background-image: url("background.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER (SAME AS PERFECT PAGE) ================= */
+
+header{
+  opacity: 0;
+  transform: translateY(-60px);
+  animation: headerDrop 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes headerDrop{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+}
+
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top{
+  padding: 1rem 2rem;
+  color: black;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px black;
+  margin: 50px 70px 20px 70px;
+  transition: 0.4s ease;
+}
+
+.top:hover{
+  color: white;
+  background: black;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: rgb(71, 0, 0);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 30px;
+  color: black;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info,
+.contact-form {
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+p{
+  font-size: larger;
+  margin: 20px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: larger;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #4a148c;
+  margin-right: 0.75rem;
+  width: 30px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a148c;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4a148c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6a1b9a;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px){
+
+  .top{
+    margin: 20px 10px;
+    padding: 0.6rem 1rem;
+    font-size: 14px;
+  }
+
+  .contact-content{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-title{
+    font-size: 1.8rem;
+  }
+
+  h3{
+    font-size: 22px;
+  }
+
+  p{
+    font-size: 16px;
+  }
+
+  .contact-item{
+    font-size: 16px;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="nav">
+      <a href="Neha.html" class="top">About Me</a>
+      <a href="education.html" class="top">Education</a>
+      <a href="skills.html" class="top">Skills</a>
+      <a href="habits.html" class="top">Habits</a>
+      <a href="contact.html" class="top">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section id="contact" class="contact section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Let's Connect!</h3>
+        <p>
+          I'm always open to discussing new opportunities, interesting projects,
+          or just having a chat about technology. Feel free to reach out!
+        </p>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>neha.student@email.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+1 (555) 123-4567</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>San Francisco, CA</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <span>linkedin.com/in/neha-student</span>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://unpkg.com/@barba/core"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>potfolio of neha</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+
+        body{
+            color: white;
+            background-image: url("background.jpeg");
+            background-size: cover; 
+            background-position: center;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+        }
+
+        /* ================= HEADER ANIMATION ================= */
+
+        header{
+            opacity: 0;
+            transform: translateY(-60px);
+            animation: headerDrop 1s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes headerDrop{
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            padding-top: 45px;
+        }
+
+        .top{
+            padding: 1rem 2rem;
+            color: black;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px black;
+            margin:50px 70px 20px 70px;
+            
+        }
+
+        .top:hover {
+            color: white;
+            background: black;
+            transition: 0.4s ease;
+        }
+
+        /* ================= CIRCLE VIDEO ANIMATION ================= */
+
+        .image{
+            padding: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle{
+            width:300px;
+            height:300px;
+            border-radius:50%;
+            overflow:hidden;
+            border: 4px solid black;
+            box-shadow: 0 0 10px black;
+
+            opacity: 0;
+            filter: blur(15px);
+            transform: scale(0.8);
+            animation: videoReveal 1.2s ease forwards;
+        }
+
+        @keyframes videoReveal{
+            to{
+                opacity: 1;
+                filter: blur(0);
+                transform: scale(1);
+            }
+        }
+
+        .circle video{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        /* ================= CONTAINER ANIMATION ================= */
+
+        .container{
+            opacity: 0;
+            transform: translateY(80px);
+            animation: containerUp 1.2s ease forwards;
+            animation-delay: 1.4s;
+        }
+
+        @keyframes containerUp{
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about {
+            padding: 20px 20px 20px 40px;
+            padding-top: 50px;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .about p{
+            padding-top: 30px;
+        }
+
+        .name1{
+            font-size: 60px;
+            font-weight: bolder;
+        }
+
+        .name2{
+            font-size: 60px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        /* ================= MOBILE RESPONSIVE ================= */
+
+        @media(max-width:768px){
+
+            .circle{
+                width:220px;
+                height:220px;
+            }
+
+            .name1,.name2{
+                font-size: 36px;
+            }
+
+            .about{
+                font-size: 18px;
+                padding:20px;
+            }
+
+            .top{
+                margin:20px 10px;
+                padding: 0.6rem 1rem;
+                font-size:14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+   <header>
+      <nav class="navbar">
+        <div class="nav">
+           <a href="Neha.html" class="top">About Me </a>
+           <a href="education.html" class="top">Education</a>
+           <a href="skills.html" class="top">Skills</a>
+           <a href="habits.html"class="top">Habits</a>
+           <a href="contact.html"class="top">Contact</a>
+        </div>
+      </nav>
+   </header>
+
+   <div class="image">
+        <div class="circle">
+            <video autoplay muted loop>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </div>
+   </div>
+
+   <section class="container">
+        <div class="about">
+            <span class="name1">Hi, I'm </span>
+            <span class="name2"> ATEEQA BANU</span>
+            <p>
+                I am a BCA student at Bengaluru City University with a strong interest in web development and software technonogies.
+                I am currently learning modern frontend tools, and improving my programming skills.
+                I like to understand how software works improve my skills step by step through practice and projects.
+            </p>
+        </div>
+   </section>
+
+</body>
+</html>
